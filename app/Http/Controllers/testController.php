@@ -21,14 +21,13 @@ class testController extends Controller
     public function store(Request $request){
         $store = $request->only(['brand','name','ml','price','image']);
         product::create($store);
-        return back();
+        return redirect('/admin');
     }
+
 
     public function delete($id){
         DB::delete("delete from products where id=?",[$id]);
-
-        $data = product::all();
-        return view('admin',['data'=>$data]);
+        return redirect('/admin');
     }
    
 }

@@ -27,3 +27,4 @@ Route::post('/store',[testController::class,'store'])->name('store');
 // Route::get('/edit/{id}',  [testController::class, 'edit'])->name('edit');
 // Route::post('/update',  [testController::class, 'update'])->name('update');
 Route::get('/delete/{id}',  [testController::class, 'delete'])->name('delete');
+Route::get('/test',  [testController::class, 'test'])->name('test');

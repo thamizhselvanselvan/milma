@@ -1,107 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('master')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <title>home</title>
-    <style>
-        :root {
-            --primary: #484848;
-            --white: #ffffff;
-            --background: #2c65da;
-            --chocolate: #653425;
-            --vannilla:#F7D047;
-            --pista:#9FDC3C;
-        }
-
-        body {
-            padding: 0;
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            color: var(--primary);
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .aside p {
-            line-height: 35px;
-            font-size: 18px;
-        }
-
-        .chocolate-section .heading {
-            background: var(--chocolate);
-            color:var(--vannilla);
-        }
-        .vannilla-section .heading {
-            background: var(--vannilla);
-            color:var(--chocolate);
-        }
-        .pista-section .heading{
-            background: var(--pista);
-            color:var(--primary);
-        }
-
-        .card-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 15px;
-        }
-        .vannilla-section .wrap{
-            border: 5px solid var(--vannilla);
-        }
-        .chocolate-section .wrap{
-            border: 5px solid var(--chocolate);
-        }
-        .pista-section .wrap{
-            border: 5px solid var(--pista);
-        }
-        .wrap {
-            padding: 15px;
-            border-radius: 20px;
-        }
-
-        .wrap img {
-            border-radius: 20px;
-            object-fit: cover;
-            height: 270px;
-        }
-
-        .footer {
-            background: var(--background);
-        }
-
-        .footer img {
-            width: 150px;
-        }
-
-        footer a {
-            color: var(--white);
-        }
-
-        footer a:hover {
-            color: var(--white);
-        }
-    </style>
-</head>
-
-<body>
-    <header>
+@section('content')
+<header>
         <img src="images/banner-img.svg" alt="banner" class="w-100">
     </header>
     <div class="container aside">
         <div class="row py-5">
             <div class="col-md-5">
-                <img src="images/chakulate.jpg" alt="img" class="w-100">
+                <img src="images/chocolate3.jpg" alt="img" class="w-100">
             </div>
             <p class="col-md-7 d-flex align-items-center">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -223,16 +129,4 @@
             </div>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
-    </script>
-</body>
-
-</html>
+@endsection
