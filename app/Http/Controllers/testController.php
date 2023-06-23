@@ -21,7 +21,7 @@ class testController extends Controller
     public function store(Request $request){
         $store = $request->only(['brand','name','ml','price','image']);
         product::create($store);
-        return redirect('/admin');
+        return redirect('/admin')->with('success','You have successfully added product.');
     }
 
 
