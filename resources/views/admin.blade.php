@@ -1,6 +1,7 @@
 @extends('master')
 @section('content')
-<div class="container mt-5">
+    <div class="container mt-5">
+        <h3>Admin Page</h3>
         <div class="shadow-sm mb-4 rounded data-table-section">
             <div class="card-header py-2 d-flex justify-content-between align-items-center">
                 <h6 class="m-0 font-weight-bold">Orders</h6>
@@ -131,8 +132,6 @@
             </table>
         </div>
 
-        
+
     </div>
 @endsection
-
-

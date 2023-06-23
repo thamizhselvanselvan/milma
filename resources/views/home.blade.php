@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-<header>
+    <header>
         <img src="images/banner-img.svg" alt="banner" class="w-100">
     </header>
     <div class="container aside">
@@ -26,20 +26,21 @@
             <p class="heading h4  rounded text-center rounded-pill py-2 w-25 m-auto mb-5">Chocolate</p>
             <div class="row card-grid">
                 @foreach ($data as $val)
-                    @if( $val->brand == "Chocolate")
-                    <div class="wrap">
-                        <div style="height: 270px;" class="mb-3">
-                            <img src="{{ asset('images/' . $val->image) }}" alt="{{ $val->image }}" class="w-100 mb-3">
+                    @if ($val->brand == 'Chocolate')
+                        <div class="wrap">
+                            <div style="height: 270px;" class="mb-3">
+                                <img src="{{ asset('images/' . $val->image) }}" alt="{{ $val->image }}"
+                                    class="w-100 mb-3">
 
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid">
-                                <span class="name fw-bold h6">{{ $val->name }}</span>
-                                <span class="ml text-black-50 fw-">{{ $val->ml }}ml</span>
                             </div>
-                            <span class="price fw-bold h5">${{ $val->price }}</span>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-grid">
+                                    <span class="name fw-bold h6">{{ $val->name }}</span>
+                                    <span class="ml text-black-50 fw-">{{ $val->ml }}ml</span>
+                                </div>
+                                <span class="price fw-bold h5">${{ $val->price }}</span>
+                            </div>
                         </div>
-                    </div>
                     @endif
                 @endforeach
             </div>
@@ -48,20 +49,20 @@
             <p class="heading h4  rounded text-center rounded-pill py-2 w-25 m-auto my-5">Vannilla</p>
             <div class="row card-grid">
                 @foreach ($data as $val)
-                    @if( $val->brand == "Vannilla")
-                    <div class="wrap">
-                        <div style="height: 270px;" class="mb-3">
-                            <img src="{{ asset('images/' . $val->image) }}" alt="{{ $val->image }}" class="w-100 mb-3">
-
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid">
-                                <span class="name fw-bold h6">{{ $val->name }}</span>
-                                <span class="ml text-black-50 fw-">{{ $val->ml }}ml</span>
+                    @if ($val->brand == 'Vannilla')
+                        <div class="wrap">
+                            <div style="height: 270px;" class="mb-3">
+                                <img src="{{ asset('images/' . $val->image) }}" alt="{{ $val->image }}"
+                                    class="w-100 mb-3">
                             </div>
-                            <span class="price fw-bold h5">${{ $val->price }}</span>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-grid">
+                                    <span class="name fw-bold h6">{{ $val->name }}</span>
+                                    <span class="ml text-black-50 fw-">{{ $val->ml }}ml</span>
+                                </div>
+                                <span class="price fw-bold h5">${{ $val->price }}</span>
+                            </div>
                         </div>
-                    </div>
                     @endif
                 @endforeach
             </div>
@@ -70,20 +71,21 @@
             <p class="heading h4  rounded text-center rounded-pill py-2 w-25 m-auto my-5">Pista</p>
             <div class="row card-grid">
                 @foreach ($data as $val)
-                    @if( $val->brand == "Pista")
-                    <div class="wrap">
-                        <div style="height: 270px;" class="mb-3">
-                            <img src="{{ asset('images/' . $val->image) }}" alt="{{ $val->image }}" class="w-100 mb-3">
+                    @if ($val->brand == 'Pista')
+                        <div class="wrap">
+                            <div style="height: 270px;" class="mb-3">
+                                <img src="{{ asset('images/' . $val->image) }}" alt="{{ $val->image }}"
+                                    class="w-100 mb-3">
 
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid">
-                                <span class="name fw-bold h6">{{ $val->name }}</span>
-                                <span class="ml text-black-50 fw-">{{ $val->ml }}ml</span>
                             </div>
-                            <span class="price fw-bold h5">₹{{ $val->price }}</span>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-grid">
+                                    <span class="name fw-bold h6">{{ $val->name }}</span>
+                                    <span class="ml text-black-50 fw-">{{ $val->ml }}ml</span>
+                                </div>
+                                <span class="price fw-bold h5">₹{{ $val->price }}</span>
+                            </div>
                         </div>
-                    </div>
                     @endif
                 @endforeach
             </div>
