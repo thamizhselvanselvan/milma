@@ -19,13 +19,6 @@ class testController extends Controller
     }
 
     public function store(Request $request){
-        $request->validate([
-            'brand' =>'required',
-            'name' =>'required',
-            'ml' =>'required',
-            'price' =>'required',
-            'image' =>'required|mimes:jpg.jpeg,png,svg,gif',
-        ]);
         $store = $request->only(['brand','name','ml','price','image']);
         product::create($store);
         return redirect('/admin');
