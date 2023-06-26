@@ -11,7 +11,7 @@ class testController extends Controller
     public function home(Request $request){
         $data = product::all();
         return view('home',['data'=>$data]);
-    }
+    } 
 
     public function admin(Request $request){
         $data = product::all();
@@ -19,7 +19,13 @@ class testController extends Controller
     }
 
     public function store(Request $request){
-        $store = $request->only(['brand','name','ml','price','image']);
+        $store = $request->validate([
+            'brand'=>'required',
+            'name'=>'required',
+            'ml'=>'required',
+            'price'=>'required',
+            'image'=>'required|image|mimes:svg,png,jpeg,jpg,gif',
+        ]);
         product::create($store);
         return redirect('/admin')->with('success','You have successfully added product.');
     }
@@ -29,5 +35,5 @@ class testController extends Controller
         DB::delete("delete from products where id=?",[$id]);
         return redirect('/admin');
     }
-   
+
 }
