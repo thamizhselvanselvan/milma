@@ -22,6 +22,6 @@ use App\Http\Controllers\testController;
 Route::get('/',[testController::class,'home'])->name('home');
 
 
-Route::get('/admin',[testController::class,'admin'])->name('admin');
-Route::post('/store',[testController::class,'store'])->name('store');
-Route::get('/delete/{id}',  [testController::class, 'delete'])->name('delete');
+Route::get('admin',[testController::class,'admin'])->name('admin');
+Route::post('admin',[testController::class,'store'])->name('store');
+Route::get('delete/{id}',  [testController::class, 'delete'])->name('delete');

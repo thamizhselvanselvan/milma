@@ -44,7 +44,7 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="{{ route('store') }}" method="POST" enctype="multipart/for-data">
+                                    <form action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="pb-4">
                                             <div class="row g-3">
@@ -61,30 +61,42 @@
                                                 </div>
                                                 <div>
                                                     <div class="form-floating">
-                                                        <input type="text" class="form-control" id="name"
-                                                            placeholder="Customer name" name="name">
+                                                        <input type="text" class="form-control @if($errors->has('name')) {{'is-invalid'}} @endif" id="name"
+                                                            placeholder="Customer name" name="name" value="{{old('name')}}">
                                                         <label for="name">name</label>
+                                                        @if($errors->has('name')) 
+                                                        <div class="invalid-feedback">{{$errors->first('name')}}</div>
+                                                        @endif
                                                     </div>
                                                 </div>
                                                 <div>
                                                     <div class="form-floating">
-                                                        <input type="number" class="form-control" id="ml"
-                                                            name="ml" placeholder="ml">
+                                                        <input type="number" class="form-control @if($errors->has('ml')) {{'is-invalid'}} @endif" id="ml"
+                                                            name="ml" placeholder="ml" value="{{old('ml')}}">
                                                         <label for="ml">ML</label>
+                                                        @if($errors->has('name')) 
+                                                        <div class="invalid-feedback">{{$errors->first('ml')}}</div>
+                                                        @endif
                                                     </div>
                                                 </div>
                                                 <div>
                                                     <div class="form-floating">
-                                                        <input type="number" class="form-control" id="price"
-                                                            name="price" placeholder="price">
+                                                        <input type="number" class="form-control @if($errors->has('price')) {{'is-invalid'}} @endif" id="price"
+                                                            name="price" placeholder="price" value="{{old('price')}}">
                                                         <label for="price">Price</label>
+                                                        @if($errors->has('name')) 
+                                                        <div class="invalid-feedback">{{$errors->first('price')}}</div>
+                                                        @endif
                                                     </div>
                                                 </div>
                                                 <div>
                                                     <label for="formFile" class="form-label">Default file input
                                                         example</label>
-                                                    <input class="form-control" name="image" type="file"
+                                                    <input class="form-control @if($errors->has('image')) {{'is-invalid'}} @endif" name="image" type="file"
                                                         id="formFile">
+                                                        @if($errors->has('name')) 
+                                                        <div class="invalid-feedback">{{$errors->first('image')}}</div>
+                                                        @endif
                                                 </div>
                                             </div>
                                         </div>
